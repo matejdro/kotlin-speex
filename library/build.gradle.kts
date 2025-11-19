@@ -6,13 +6,13 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.vanniktech.mavenPublish)
 }
-val headSha by lazy {
-    project.providers.exec {
-        commandLine("git", "describe", "--always", "--dirty")
-    }.standardOutput.asText.get().trim()
-}
+//val headSha by lazy {
+//    project.providers.exec {
+//        commandLine("git", "describe", "--always", "--dirty")
+//    }.standardOutput.asText.get().trim()
+//}
 group = "coredevices.speex"
-version = headSha
+//version = headSha
 
 publishing {
     repositories {
